@@ -1,0 +1,581 @@
+/* ---------------------------------------------
+Table of contents
+------------------------------------------------
+01. font & reset css
+02. global styles
+03. header
+04. banner (Fondo: cataratas12.jpg)
+05. properties (Destinos)
+06. contact
+07. footer
+--------------------------------------------- */
+
+/* ---------------------------------------------
+01. Font & Reset CSS
+--------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e1e1e;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #4a4a4a;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------
+02. Global Styles & Containers
+--------------------------------------------- */
+::selection {
+  background: #0071f8;
+  color: #fff;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.container {
+  width: 85vw;
+  max-width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-heading {
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 20px;
+  line-height: 40px;
+}
+
+.section-heading h2 em {
+  font-style: normal;
+  color: #0071f8;
+}
+
+.section-heading h6 {
+  color: #ee626b;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main-button a {
+  display: inline-block;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 30px;
+  border-radius: 25px;
+  transition: all .3s;
+}
+
+.main-button a:hover {
+  background-color: #f35525;
+  color: #fff;
+}
+
+/* ---------------------------------------------
+03. Header Style
+--------------------------------------------- */
+.header-area {
+  position: relative;
+  background-color: #fff;
+  height: 100px;
+  z-index: 100;
+  transition: all .5s ease 0s;
+}
+
+.header-area .main-nav {
+  background: transparent;
+  display: flex;
+}
+
+.header-area .main-nav .logo {
+  transition: all 0.3s ease 0s;
+  display: inline-block;
+}
+
+.header-area .main-nav .logo h1 {
+  line-height: 100px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.header-area .main-nav ul.nav {
+  flex-basis: 100%;
+  margin-top: 30px;
+  justify-content: right;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+}
+
+.header-area .main-nav .nav li {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  height: 32px;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: #1e1e1e;
+  transition: all 0.4s ease 0s;
+  border: transparent;
+  letter-spacing: .25px;
+}
+
+.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li a.active {
+  color: #f35525;
+}
+
+/* Botón WhatsApp en Menú */
+.header-area .main-nav .nav li.whatsapp-contact a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 600;
+}
+
+.header-area .main-nav .nav li.whatsapp-contact img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Sticky Header */
+.background-header {
+  background-color: #fff;
+  height: 80px!important;
+  position: fixed!important;
+  top: 0!important;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+}
+
+.background-header .main-nav .logo h1 {
+  line-height: 80px;
+}
+
+.background-header .main-nav ul.nav {
+  margin-top: 20px;
+}
+
+/* Menu Trigger (Mobile) */
+.header-area .main-nav .menu-trigger {
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  width: 32px;
+  height: 40px;
+  text-indent: -9999em;
+  z-index: 99;
+  right: 20px;
+  display: none;
+}
+
+.header-area .main-nav .menu-trigger span,
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  transition: all 0.4s;
+  background-color: #1e1e1e;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  content: "";
+}
+
+.header-area .main-nav .menu-trigger span {
+  top: 16px;
+}
+
+.header-area .main-nav .menu-trigger span:before {
+  top: -10px;
+}
+
+.header-area .main-nav .menu-trigger span:after {
+  top: 10px;
+}
+
+.header-area .main-nav .menu-trigger.active span {
+  background-color: transparent;
+}
+
+.header-area .main-nav .menu-trigger.active span:before {
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+}
+
+.header-area .main-nav .menu-trigger.active span:after {
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+}
+
+/* ---------------------------------------------
+04. Banner Style (FOTO cataratas12.jpg)
+--------------------------------------------- */
+.main-banner .item {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 160px 10% 220px 10%;
+  margin-top: 0px;
+  min-height: 600px;
+}
+
+/* AQUÍ SE APLICA EL CAMBIO DE FOTO DEL BANNER */
+.main-banner .item-1 {
+  background-image: url(../images/cataratas11.jpg);
+}
+
+.main-banner .item span.category {
+  background-color: #fff;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 6px 15px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.main-banner .item span.category em {
+  font-style: normal;
+  color: #f35525;
+}
+
+.main-banner .item h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 56px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------
+05. Properties Style (Destinos)
+--------------------------------------------- */
+.properties .item {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.properties .item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.properties .item span.category {
+  background-color: #fbd9cf;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #1e1e1e;
+  padding: 5px 12px;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+.properties .item h4 {
+  font-size: 16px;
+  margin: 15px 0px;
+}
+
+.properties .item ul {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.properties .item ul li {
+  display: inline-block;
+  font-size: 13px;
+  color: #4a4a4a;
+  margin-right: 10px;
+}
+
+.properties .item .main-button {
+  text-align: center;
+}
+
+/* ---------------------------------------------
+06. Contact Style (Sección Simple)
+--------------------------------------------- */
+.contact {
+  background-image: url(../images/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 0px 250px 0px;
+  position: relative;
+  min-height: 400px;
+}
+
+.contact .section-heading h2 {
+  color: #fff;
+}
+
+.contact-content {
+  margin-top: -240px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-content #map {
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.contact-content .item {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+  padding: 35px 30px;
+  background-color: #fff;
+}
+
+.contact-content .phone {
+  margin-right: 15px;
+}
+
+.contact-content .email {
+  margin-left: 15px;
+}
+
+.contact-content .item img {
+  float: left;
+  margin-right: 25px;
+  vertical-align: middle;
+}
+
+.contact-content .item h6 {
+  font-size: 20px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.contact-content .item h6 span {
+  font-size: 15px;
+  color: #aaaaaa;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------
+07. Footer Style
+--------------------------------------------- */
+footer {
+  margin-top: 150px;
+  background-color: #1e1e1e;
+  min-height: 100px;
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------
+Preloader JS Handling
+--------------------------------------------- */
+.js-preloader {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.99);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px; height: 16px;
+  top: 12px; left: 15px;
+  background: #f35525;
+  border-radius: 50%;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block; float: left;
+  width: 16px; height: 16px;
+  margin-left: 16px;
+  background: #f35525;
+  border-radius: 50%;
+}
+
+.preloader-inner .dots {
+  animation: dots 2.8s infinite;
+  margin-top: 12px; margin-left: 31px;
+}
+
+@keyframes dot {
+  50% { transform: translateX(96px); }
+}
+@keyframes dots {
+  50% { transform: translateX(-31px); }
+}
+
+/* ---------------------------------------------
+Responsive Style
+--------------------------------------------- */
+@media (max-width: 992px) {
+  .header-area .main-nav .logo h1 {
+    line-height: 100px;
+  }
+  .background-header .main-nav .logo h1 {
+    line-height: 80px;
+  }
+  .main-banner .item h2 {
+    width: 100%;
+  }
+  .properties .item h6 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .properties .item .main-button {
+    text-align: center;
+  }
+  .properties .item ul li {
+    margin-right: 10px;
+    font-size: 13px;
+  }
+  .contact-content .phone {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .contact-content .email {
+    margin-left: 0px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .main-nav .logo h1 {
+    line-height: 80px !important;
+  }
+  .header-area {
+    padding: 0px 15px;
+    height: 80px;
+    box-shadow: none;
+    text-align: center;
+  }
+  .header-area .container { padding: 0px; }
+  .header-area .logo { margin-left: 0px; position: absolute; left: 30px; top: 0px; }
+  .header-area .menu-trigger { display: block !important; }
+  .header-area .main-nav { overflow: hidden; }
+  
+  .header-area .main-nav .nav {
+    float: none;
+    width: 100%;
+    display: none;
+    margin-left: 0px;
+    background-color: #fff;
+  }
+  
+  .header-area.header-sticky .nav { margin-top: 80px !important; }
+  
+  .header-area .main-nav .nav li {
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    border-top: 1px solid #ddd;
+    background-color: #f1f0fe;
+    height: 50px;
+  }
+  
+  .header-area .main-nav .nav li a {
+    line-height: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+}
